@@ -11,6 +11,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
 import entity.User;
+import service.UserService;
 import service.UserServiceImpl;
 
 public class LoginAction extends ActionSupport implements SessionAware, ServletRequestAware{
@@ -20,7 +21,7 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 	private Map<String, Object> session;
 	private HttpServletRequest request;
 	private List<User> list;
-	private UserServiceImpl service;
+	private UserService service = new UserServiceImpl();
 	
 	private String username;
 	private String password;
@@ -42,11 +43,12 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 		this.request = request;
 	}
 
-	public UserServiceImpl getService() {
+	
+	public UserService getService() {
 		return service;
 	}
 
-	public void setService(UserServiceImpl service) {
+	public void setService(UserService service) {
 		this.service = service;
 	}
 
@@ -89,8 +91,9 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 	}
 	
 	public String loginForm() throws Exception {
-		this.list = service.getUsers();
-		for(User user : list) {
+		List<User> listUser = null;
+		listUser = service.getUsers();
+		for(User user : listUser) {
 			if(user.getUsername().trim().equals(this.username) && user.getPassword().trim().equals(this.password)) {
 				this.session.put("username", user.getUsername());
 				return SUCCESS;
