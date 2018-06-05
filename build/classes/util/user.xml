@@ -3,7 +3,7 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="entity.User" table="User" catalog="struts2_demo">
+   <!--  <class name="entity.User" table="User" catalog="struts2_demo">
         <id name="id" type="int">
             <column name="id" />
             <generator class="assigned" />
@@ -14,5 +14,15 @@
         <property name="password" type="string">
             <column name="password" length="50" />
         </property>
-    </class>
+    </class> -->
+    
+    <class name = "entity.User" table = "user" catalog="struts2_demo">
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      <property name = "username" column = "username" type = "string"/>
+      <property name = "password" column = "password" type = "string"/>
+      <property name = "email" column = "email" type = "string"/>
+      
+   </class>
 </hibernate-mapping>
