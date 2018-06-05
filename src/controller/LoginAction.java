@@ -87,7 +87,17 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 	
 	@Override
 	public String execute() throws Exception {
+		System.out.println(" Demo Interceptor ");
 		return SUCCESS;
+	}
+	
+	public void validate() {
+		if(username == null || username.trim().equals("")) {
+			addFieldError("username", "Username Khong dc de trong");
+		}
+		if(password == null || password.trim().equals("")) {
+			addFieldError("password", "Password Khong dc de trong");
+		}
 	}
 	
 	public String loginForm() throws Exception {
@@ -106,6 +116,7 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 	public String logout() throws Exception {
 		if (this.session.containsKey("username")) {
 			this.session.remove("username");
-		}return SUCCESS;
+		}
+		return SUCCESS;
 	}
 }

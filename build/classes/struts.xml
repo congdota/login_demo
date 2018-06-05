@@ -6,14 +6,25 @@
 	<constant name="struts.devMode" value="true" />
 	<constant name="struts.action.extension" value="html" />
 
+
 	<package name="default" extends="struts-default" namespace="/">
+
+		<interceptors>
+			<interceptor name="printMessageInterceptor" class="common.TestInterceptor"></interceptor>
+			<interceptor-stack name="testInterceptor">
+				<interceptor-ref name="printMessageInterceptor"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
 		<action name="login" class="controller.LoginAction">
-			<result name="success">/login.jsp</result>
+			<result name="success">WEB-INF/login.jsp</result>
 		</action>
 
 		<action name="process-login" class="controller.LoginAction"
 			method="loginForm">
+			<interceptor-ref name="testInterceptor"></interceptor-ref>
 			<result name="success">WEB-INF/success.jsp</result>
+			<result name="input">WEB-INF/login.jsp</result>
 			<result name="error">WEB-INF/login.jsp</result>
 		</action>
 
