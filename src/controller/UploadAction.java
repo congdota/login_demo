@@ -1,3 +1,4 @@
+
 package controller;
 
 import java.io.File;
@@ -8,21 +9,21 @@ import org.apache.commons.io.FileUtils;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UploadAction extends ActionSupport{
-
+	
 	private static final long serialVersionUID = 1L;
 	private File fileUpload;
-	private String fileUploadFileName;
-	private String fileUploadContentType;
-
-	public String doUpload() {
-		File saveFilePath = new File("E:/upload/" + fileUploadFileName);
-		try {
-			FileUtils.copyFile(fileUpload, saveFilePath);
-		} catch (IOException ex) {
-			System.out.println("Couldn't save file: " + ex.getMessage());
-		}
-		return SUCCESS;
-	}
+    private String fileUploadFileName;
+    private String fileUploadContentType;
+ 
+    public String doUpload() {
+        File saveFilePath = new File("/home/nguyen.chi.cong/Documents/upload" + fileUploadFileName);
+        try {
+            FileUtils.copyFile(fileUpload, saveFilePath);
+        } catch (IOException ex) {
+            System.out.println("Couldn't save file: " + ex.getMessage());
+        }
+        return SUCCESS;
+    }
 
 	public File getFileUpload() {
 		return fileUpload;
@@ -47,6 +48,6 @@ public class UploadAction extends ActionSupport{
 	public void setFileUploadContentType(String fileUploadContentType) {
 		this.fileUploadContentType = fileUploadContentType;
 	}
-
-
+    
+    
 }

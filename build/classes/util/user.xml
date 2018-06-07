@@ -16,7 +16,7 @@
         </property>
     </class> -->
     
-    <class name = "entity.User" table = "user" catalog="struts2_demo">
+    <class name = "entity.User" table = "User" catalog="struts2_demo">
       <id name = "id" type = "int" column = "id">
          <generator class="native"/>
       </id>
