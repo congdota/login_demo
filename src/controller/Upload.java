@@ -7,11 +7,11 @@ import com.opensymphony.xwork2.ActionSupport;
 public class Upload extends ActionSupport{
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private File[] upload;
 	private String[] uploadFileName;
 	private String[] uploadContentType;
-	
+
 	public String execute() throws Exception{
 		return SUCCESS;
 	}
@@ -39,6 +39,6 @@ public class Upload extends ActionSupport{
 	public void setUploadContentType(String[] uploadContentType) {
 		this.uploadContentType = uploadContentType;
 	}
-	
-	
+
+
 }
