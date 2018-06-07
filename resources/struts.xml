@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
-
-
 <struts>
 	<constant name="struts.devMode" value="true" />
 	<!-- <constant name="struts.action.extension" value="html" /> -->
 	<constant name="struts.multipart.maxSize" value="10485760" />
 	<constant name="struts.custom.i18n.resources" value="global" />
-	<constant name="struts.multipart.saveDir" value="location of your choice" />
+	<constant name="struts.multipart.saveDir"
+		value="location of your choice" />
 	<package name="login" extends="struts-default" namespace="/">
 
 		<!-- <interceptors> <interceptor name="printMessageInterceptor" class="common.TestInterceptor"></interceptor> 
@@ -28,7 +27,8 @@
 			<result name="error">WEB-INF/login.jsp</result>
 		</action>
 
-		<action name="logout" class="controller.LoginAction" method="logout">
+		<action name="logout" class="controller.LoginAction"
+			method="logout">
 			<result name="success">WEB-INF/login.jsp</result>
 		</action>
 
@@ -45,13 +45,12 @@
 			<result name="success">WEB-INF/result.jsp</result>
 			<result name="input">WEB-INF/upload.jsp</result>
 		</action>
-		
-		<action name = "emailer" 
-         class = "controller.EmailAction" method = "execute">
-         <result name = "success">WEB-INF/emailSuccess.jsp</result>
-         <result name = "error">WEB-INF/errorEmail.jsp</result>
-        </action>
-      
+
+		<action name="emailer" class="controller.EmailAction"
+			method="execute">
+			<result name="success">WEB-INF/emailSuccess.jsp</result>
+			<result name="error">WEB-INF/errorEmail.jsp</result>
+		</action>
 	</package>
 
 	<package name="default" namespace="/" extends="struts-default">

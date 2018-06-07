@@ -10,51 +10,31 @@
 </head>
 <body>
 	<h1>Login Form:</h1>
-	<!-- <form action="process-login.html" method="post">
-		<table>
-			<tr>
-				<td>Username:</td>
-				<td><input type="text" name="username"></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="password"></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Login"></td>
-			</tr>
-		</table>
-	</form> -->
-<%-- 	<s:actionerror /> --%>
-	<%-- <s:form action="process-login.html" method="post">
-		<s:textfield name="username" label="Name" size="50"/>
-		<s:password name="password" label="Password" size="50"/>
-		<s:submit value="Login" label="Submit" align="center"  />
-	</s:form> --%>
 	<s:form action="process-login" method="post">
-		<s:textfield name="username" key="global.username" size="50"/>
-		<s:password name="password" key="global.password" size="50"/>
-		<s:submit name="submit" value="Login" key="global.submit" align="center"  />
+		<s:textfield name="username" key="global.username" size="50" />
+		<s:password name="password" key="global.password" size="50" />
+		<s:submit name="submit" value="Login" key="global.submit"
+			align="center" />
 	</s:form>
-	
+
 	<s:url id="vietnam" var="vietnam" namespace="/" action="locale">
-		<s:param name="request_locale" >vn</s:param>
+		<s:param name="request_locale">vn</s:param>
 	</s:url>
 	<s:url id="france" var="france" namespace="/" action="locale">
-		<s:param name="request_locale" >fr</s:param>
+		<s:param name="request_locale">fr</s:param>
 	</s:url>
 	<s:url id="english" var="english" namespace="/" action="locale">
-		<s:param name="request_locale" >en</s:param>
+		<s:param name="request_locale">en</s:param>
 	</s:url>
-	
+
 	<s:a href="%{english}">English</s:a>
 	<s:a href="%{vietnam}">Vietnam</s:a>
 	<s:a href="%{france}">France</s:a>
 	<%
 		String message = (String) request.getAttribute("message");
-		if(!(message == null)){
+		if (!(message == null)) {
 			out.println(message);
-		}else{
+		} else {
 			message = "";
 			out.println(message);
 		}
