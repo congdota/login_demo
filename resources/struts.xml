@@ -54,8 +54,8 @@
 	</package>
 
 	<package name="default" namespace="/" extends="struts-default">
-		<action name="locale" class="controller.LocationAction">
-			<result name="SUCCESS">WEB-INF/login.jsp</result>
+		<action name="locale" class="controller.LocationAction"  method = "execute">
+			<result name="success">WEB-INF/login.jsp</result>
 		</action>
 	</package>
 </struts>

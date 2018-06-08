@@ -13,7 +13,7 @@
 	<s:form action="process-login" method="post">
 		<s:textfield name="username" key="global.username" size="50" />
 		<s:password name="password" key="global.password" size="50" />
-		<s:submit name="submit" value="Login" key="global.submit"
+		<s:submit name="submit" key="global.submit"
 			align="center" />
 	</s:form>
 
