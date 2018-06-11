@@ -93,10 +93,10 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 	
 	public void validate() {
 		if(username == null || username.trim().equals("")) {
-			addFieldError("username", "Username Khong dc de trong");
+			addFieldError("username", getText("username.required"));
 		}
 		if(password == null || password.trim().equals("")) {
-			addFieldError("password", "Password Khong dc de trong");
+			addFieldError("password", getText("password.required"));
 		}
 	}
 	
@@ -109,7 +109,7 @@ public class LoginAction extends ActionSupport implements SessionAware, ServletR
 				return SUCCESS;
 			}
 		}
-		request.setAttribute("message", "Username or password is wrong");
+		request.setAttribute("message", getText("unknowError.required"));
 		return ERROR;
 	}
 	

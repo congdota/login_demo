@@ -11,19 +11,19 @@
 <body>
 	<h1>Login Form:</h1>
 	<s:form action="process-login" method="post">
-		<s:textfield name="username" key="global.username" size="50" />
-		<s:password name="password" key="global.password" size="50" />
-		<s:submit name="submit" key="global.submit"
+		<s:textfield name="username" key="label.username" size="50" />
+		<s:password name="password" key="label.password" size="50" />
+		<s:submit name="submit" key="label.submit"
 			align="center" />
 	</s:form>
 
-	<s:url id="vietnam" var="vietnam" namespace="/" action="locale">
+	<s:url id="vietnam" namespace="/" action="locale">
 		<s:param name="request_locale">vn</s:param>
 	</s:url>
-	<s:url id="france" var="france" namespace="/" action="locale">
+	<s:url id="france" namespace="/" action="locale">
 		<s:param name="request_locale">fr</s:param>
 	</s:url>
-	<s:url id="english" var="english" namespace="/" action="locale">
+	<s:url id="english"  namespace="/" action="locale">
 		<s:param name="request_locale">en</s:param>
 	</s:url>
 

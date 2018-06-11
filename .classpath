@@ -49,5 +49,7 @@
 	<classpathentry kind="lib" path="/home/nguyen.chi.cong/Downloads/apache-tomcat-8.0.52/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javamail1_4_7.zip"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mail.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-json-plugin-2.5.14.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-config-browser-plugin-2.5.14.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
