@@ -33,7 +33,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/sqljdbc4-3.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-core-2.3.1.2.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/taglibs-standard-impl-1.2.1.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xwork-core-2.3.1.2.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.0.5.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javassist-3.17.0-ga.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/byte-buddy-1.8.12.jar"/>
@@ -49,7 +48,9 @@
 	<classpathentry kind="lib" path="/home/nguyen.chi.cong/Downloads/apache-tomcat-8.0.52/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javamail1_4_7.zip"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mail.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-json-plugin-2.5.14.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-config-browser-plugin-2.5.14.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-dojo-plugin-2.1.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-json-plugin-2.1.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xwork-core-2.1.6.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
