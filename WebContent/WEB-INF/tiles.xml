@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="baseLayout" template="/WEB-INF/baseLayout.jsp">
+		<put-attribute name="title" value="" />
+
+		<put-attribute name="header" value="/WEB-INF/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/menu.jsp" />
+
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/footer.jsp" />
+
+	</definition>
+	<definition name="AutoComplete" extends="baseLayout">
+		<put-attribute name="title" value="Success" />
+		<put-attribute name="body" value="/WEB-INF/AutoComplete.jsp" />
+	</definition>
+	<definition name="UploadResult" extends="baseLayout">
+		<put-attribute name="title" value="Upload Success" />
+		<put-attribute name="body" value="/WEB-INF/result.jsp" />
+	</definition>
+	<definition name="UploadFail" extends="baseLayout">
+		<put-attribute name="title" value="Upload Faill" />
+		<put-attribute name="body" value="/WEB-INF/upload.jsp" />
+	</definition>
+	<definition name="SuccessEmail" extends="baseLayout">
+		<put-attribute name="title" value="Email Success" />
+		<put-attribute name="body" value="/WEB-INF/emailSuccess.jsp" />
+	</definition>
+	<definition name="FailEmail" extends="baseLayout">
+		<put-attribute name="title" value="Email Faill" />
+		<put-attribute name="body" value="/WEB-INF/errorEmail.jsp" />
+	</definition>
+	<definition name="AutoCompl" extends="baseLayout">
+		<put-attribute name="title" value="  " />
+		<put-attribute name="body" value="/WEB-INF/AutoComplete.jsp" />
+	</definition>
+	<definition name="Complete" extends="baseLayout">
+		<put-attribute name="title" value="Email Faill" />
+		<put-attribute name="body" value="/WEB-INF/Complete.jsp" />
+	</definition>
+	<definition name="LocationLogin" extends="baseLayout">
+		<put-attribute name="title" value="Email Faill" />
+		<put-attribute name="body" value="/WEB-INF/login.jsp" />
+	</definition>
+	
+</tiles-definitions>
