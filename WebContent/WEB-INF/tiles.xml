@@ -14,11 +14,11 @@
 		<put-attribute name="footer" value="/WEB-INF/footer.jsp" />
 
 	</definition>
-	<definition name="AutoComplete" extends="baseLayout">
+	<!-- <definition name="AutoComplete" extends="baseLayout">
 		<put-attribute name="title" value="Success" />
 		<put-attribute name="body"
 			value="/WEB-INF/AutoComplete.jsp" />
-	</definition>
+	</definition> -->
 	<definition name="UploadResult" extends="baseLayout">
 		<put-attribute name="title" value="Upload Success" />
 		<put-attribute name="body" value="/WEB-INF/result.jsp" />
@@ -37,11 +37,11 @@
 		<put-attribute name="body"
 			value="/WEB-INF/errorEmail.jsp" />
 	</definition>
-	<definition name="AutoCompl" extends="baseLayout">
+	<!-- <definition name="AutoCompl" extends="baseLayout">
 		<put-attribute name="title" value="success autocomplete" />
 		<put-attribute name="body"
 			value="/WEB-INF/AutoComplete.jsp" />
-	</definition>
+	</definition> -->
 	<definition name="Complete" extends="baseLayout">
 		<put-attribute name="title" value="auto complete Faill" />
 		<put-attribute name="body" value="/WEB-INF/Complete.jsp" />
@@ -54,5 +54,9 @@
 		<put-attribute name="title" value="login faill" />
 		<put-attribute name="body" value="/WEB-INF/login.jsp" />
 	</definition>
+	<definition name="LoginSuccess" extends="baseLayout">
+		<put-attribute name="title" value="login success" />
+		<put-attribute name="body" value="/WEB-INF/success.jsp" />
+	</definition> 
 
 </tiles-definitions>

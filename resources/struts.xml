@@ -22,7 +22,7 @@
 
 			<!-- <result name="success" type="tiles">AutoComplete</result> -->
 
-			<result name="success" type="tiles">AutoComplete</result>
+			<result name="success" type="tiles">LoginSuccess</result>
 			<result name="input" type="tiles">Login</result>
 			<result name="error" type="tiles">Login</result>
 		</action>
@@ -50,6 +50,12 @@
 			method="execute">
 			<result name="success" type="tiles">SuccessEmail</result>
 			<result name="error" type="tiles">FailEmail</result>
+		</action>
+		
+		<action name="redirectEmail">
+			 <result type="redirectAction">emailer</result>
+			<!-- <result>WEB-INF/email.jsp</result>
+        	<result name="error" type="redirectAction">error</result> -->
 		</action>
 	</package>
 

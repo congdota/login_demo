@@ -12,6 +12,6 @@ Welcome: ${sessionScope.username }
 	|
 	<a href="logout.html">Logout</a>
 	
-	<a href="<s:url action="emailer"/>">Upload file here</a>
+	<a href="<s:url action="redirectEmail"/>">Send email file here</a>
 </body>
 </html>

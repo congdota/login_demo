@@ -2,21 +2,27 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 	<constant name="struts.devMode" value="true" />
-	<constant name="struts.custom.i18n.resources" value="global, login" />
-	<constant name="struts.multipart.saveDir" value="location of your choice" />
+	<constant name="struts.custom.i18n.resources"
+		value="global, login" />
+	<constant name="struts.multipart.saveDir"
+		value="location of your choice" />
 	<package name="login" extends="struts-default" namespace="/">
-		
+
 		<result-types>
-			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
-		
+
 		<action name="login" class="controller.LoginAction">
 			<result name="success">WEB-INF/login.jsp</result>
 		</action>
 
 		<action name="process-login" class="controller.LoginAction"
 			method="loginForm">
-			<result name="success" type="tiles">AutoComplete</result>
+
+			<!-- <result name="success" type="tiles">AutoComplete</result> -->
+
+			<result name="success" type="tiles">LoginSuccess</result>
 			<result name="input" type="tiles">Login</result>
 			<result name="error" type="tiles">Login</result>
 		</action>
@@ -26,7 +32,8 @@
 			<result name="success">WEB-INF/login.jsp</result>
 		</action>
 
-		<action name="uploadFile" class="controller.UploadAction" method="doUpload">
+		<action name="uploadFile" class="controller.UploadAction"
+			method="doUpload">
 			<interceptor-ref name="fileUpload">
 				<param name="allowedTypes">image/jpeg,image/png,image/gif</param>
 				<param name="maximumSize">4194304</param>
@@ -44,21 +51,33 @@
 			<result name="success" type="tiles">SuccessEmail</result>
 			<result name="error" type="tiles">FailEmail</result>
 		</action>
+		
+		<action name="redirectEmail">
+			 <result type="redirectAction">emailer</result>
+			<!-- <result>WEB-INF/email.jsp</result>
+        	<result name="error" type="redirectAction">error</result> -->
+		</action>
 	</package>
 
 	<package name="default" namespace="/" extends="struts-default">
-		
+
 		<result-types>
-			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
-		
+
 		<action name="locale" class="controller.LocationAction"
 			method="execute">
-			<result name="success">LocationLogin</result>
+			<result name="success" type="tiles">LocationLogin</result>
 		</action>
 	</package>
 
 	<package name="user" namespace="/" extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
 		<action name="home">
 			<result>/home.jsp</result>
 		</action>
@@ -72,18 +91,19 @@
 		</package> -->
 
 	<package name="testJson" namespace="/" extends="struts-default">
-		
+
 		<result-types>
-			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
-		
+
 		<action name="autoCompleteAction"
 			class="controller.AutoCompleteAction" method="display">
-			<result name="none">AutoCompl</result>
+			<result name="none" type="tiles">AutoCompl</result>
 		</action>
 		<action name="resultAction"
 			class="controller.AutoCompleteAction">
-			<result name="success">Complete</result>
+			<result name="success" type="tiles">Complete</result>
 		</action>
 
 	</package>
@@ -95,5 +115,5 @@
 			</result>
 		</action>
 	</package>
-	
+
 </struts>
